@@ -1,0 +1,16 @@
+{
+  "name": "calc",
+  "description": "A programmer's calculator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zonapps/calc",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "bootstrap": "~3",
+    "html5-boilerplate": "~5.2.0",
+    "jquery.ui": "latest"
+  }
+}
