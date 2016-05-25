@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="calculatorApp">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -12,11 +12,18 @@
 
     <link rel="stylesheet" media="screen" href="assets/css/main.css">
 
-    <script src="app/app.module.js"></script>
-    <script src="app/app.route.js"></script>
-    <script src="app/components/typeConverter/typeConverterController.js"></script>
+    <script src="app/modules/app.module.js"></script>
+    <script src="app/routes/app.route.js"></script>
+
+    <!-- Calculator -->
+    <link rel="stylesheet" media="screen" href="app/components/calculator/calculator.css">
+    <script src="app/modules/app.calculator.module.js"></script>
+    <script src="app/components/calculator/calculator.controller.js"></script>
+    <script src="app/components/calculator/calculator.directive.js"></script>
+
 </head>
 <body class="center-block">
-    <div ng-view></div>
+    <calculator></calculator>
+    <ng-view></ng-view>
 </body>
 </html>

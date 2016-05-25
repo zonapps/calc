@@ -3,16 +3,9 @@
  */
 
 App.config([ '$routeProvider', function($routeProvider){
-        $routeProvider.otherwise({redirectTo: '/typeConverter/'});
+        $routeProvider.otherwise({redirectTo: '/calculator/'});
     } ]
 );
 
-TypeConverterApp.config( [ '$routeProvider', function($routeProvider) {
-
-    $routeProvider.when('/typeConverter/', {
-        templateUrl: 'app/components/typeConverter/typeConverterView.html',
-        controller: 'TypeConverterCtrl'
-    } );
-} ] );
 
 

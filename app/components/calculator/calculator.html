@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<div>
+    <div class="calculator">
+        <div class="calculatorHeader">
+            <div class="dropdown" id="calculatorTypeDropdown">
+                <button class="btn dropdown-toggle calculatorButton"
+                        type="button" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    Mode
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="type in calc.types"
+                        ng-click="calc.changeCalculator($index)"
+                        ng-class="{disabled: $index==calc.typeIndex}" >
+                        <a href="#">{{type.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="resultWindow">
+            <span class="resultText" ng-show="calc.result != null">{{calc.result}}</span>
+        </div>
+        <div class="clearButtons" >
+            <button type="button" class="btn calculatorButton">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </button>
+            <button type="button" class="btn calculatorButton calculatorSmallButton">CE</button>
+            <button type="button" class="btn calculatorButton calculatorSmallButton">C</button>
+        </div>
+        <div ng-view></div>
+    </div>
+</div>
