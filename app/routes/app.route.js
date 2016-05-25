@@ -2,7 +2,7 @@
  * Created by jtcummin on 5/23/2016.
  */
 
-CalculatorApp.config([ '$routeProvider', function($routeProvider){
+App.config([ '$routeProvider', function($routeProvider){
         $routeProvider.otherwise({redirectTo: '/typeConverter/'});
     } ]
 );
