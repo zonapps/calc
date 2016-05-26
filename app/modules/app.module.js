@@ -3,6 +3,6 @@
  */
 
 
-var App = angular.module( 'app',
+var App = angular.module( 'app.main',
     [ 'ngRoute', 'app.calculator' ] );
 

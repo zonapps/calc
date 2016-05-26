@@ -49,6 +49,11 @@
     border-color: rgba( 120, 150, 255, 0.7 );
 }
 
+.calculatorButtonSmallFont {
+    font-size: .90em;
+    font-family: Verdana, Arial, sans-serif;
+}
+
 .calculatorButton:focus {
     outline: none;
 }
@@ -59,4 +64,19 @@
 
 .calculatorButton:hover {
     background-color: rgba( 120, 150, 255, 0.5 );
+}
+
+.calculatorButtonPanel {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    display: inline-block;
+    width: 40%;
+}
+
+.calculatorButtonPanelHeader {
+    font-size: 0.9em;
+    color: rgb( 120, 150, 255 );
+    text-align: center;
 }

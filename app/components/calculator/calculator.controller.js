@@ -4,9 +4,10 @@
 
 angular.module( 'app.calculator' )
 .controller( 'CalculatorController', CalculatorController )
-    .$inject = ['$log'];
+    .$inject = ['$scope','$log'];
 
-function CalculatorController($log) {
+function CalculatorController($scope, $log) {
+    $scope.$log = $log;
     this.typeIndex = 0;
     this.changeCalculator = function (index) {
         if ( this.typeIndex != index ) {
@@ -18,7 +19,6 @@ function CalculatorController($log) {
         }
 
     }
-    this.linkRoot = "/calculator/";
     this.types = [
         {
             name: "Type Converter"
@@ -27,4 +27,8 @@ function CalculatorController($log) {
             name: "Logical Operations"
         }
     ];
+
+    $scope.$on('calculatorButtonPress', function( event, data ) {
+        $scope.$log.log( "Calculator Received Event: " + event.name + ", data: " + data );
+    });
 }

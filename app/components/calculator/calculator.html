@@ -3,7 +3,8 @@
         <div class="calculatorHeader">
             <div class="dropdown" id="calculatorTypeDropdown">
                 <button class="btn dropdown-toggle calculatorButton"
-                        type="button" data-toggle="dropdown">
+                        type="button"
+                        data-toggle="dropdown">
                     <span class="caret"></span>
                     Mode
                 </button>
@@ -20,12 +21,15 @@
             <span class="resultText" ng-show="calc.result != null">{{calc.result}}</span>
         </div>
         <div class="clearButtons" >
-            <button type="button" class="btn calculatorButton">
+            <calculator-button button-name="BS">
                 <span class="glyphicon glyphicon-arrow-left"></span>
-            </button>
-            <button type="button" class="btn calculatorButton calculatorSmallButton">CE</button>
-            <button type="button" class="btn calculatorButton calculatorSmallButton">C</button>
+            </calculator-button>
+            <calculator-button button-name="CE">CE</calculator-button>
+            <calculator-button button-name="C">C</calculator-button>
         </div>
-        <div ng-view></div>
+        <div class="calculatorButtonPanel" ng-switch="calc.types[calc.typeIndex].name">
+            <type-converter-calc ng-switch-when="Type Converter"></type-converter-calc>
+            <div ng-switch-default>This is a placeholder.</div>
+        </div>
     </div>
 </div>

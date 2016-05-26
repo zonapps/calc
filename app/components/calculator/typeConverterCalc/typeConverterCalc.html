@@ -1,0 +1,19 @@
+<div>
+    <div class="calculatorButtonPanelHeader">Types</div>
+    <div ng-controller="CalculatorRadioButtonController as radioGroupCtrl">
+        <calculator-radio-button
+            class="calculatorButtonSmallFont"
+            button-name="UCHAR"
+            ctrl-radio-set="setButtonSelected(buttonName)"
+            ng-class="{'active': selectedButtonName === 'UCHAR'}">
+            UCHAR
+        </calculator-radio-button>
+        <calculator-radio-button
+            class="calculatorButtonSmallFont"
+            button-name="CHAR"
+            ctrl-radio-set="setButtonSelected(buttonName)"
+            ng-class="{'active': selectedButtonName === 'CHAR'}">
+            CHAR
+        </calculator-radio-button>
+    </div>
+</div>
